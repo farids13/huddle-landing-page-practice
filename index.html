@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Inter:wght@400;700&family=Kumbh+Sans:wght@700&family=League+Spartan:wght@400;700&family=Lexend+Deca:wght@400;700&family=Montserrat:wght@600&family=Outfit:wght@100;300;400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Inter:wght@400;700&family=Kumbh+Sans:wght@700&family=League+Spartan:wght@400;700&family=Lexend+Deca:wght@400;700&family=Montserrat:wght@600&family=Open+Sans&family=Outfit:wght@100;300;400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Huddle landing page with single introductory section</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    footer{
+
+      position: absolute;
+      bottom: 0;
+      width: 400px;
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 10px 10px 0px 0px;
+    }
+    /* @media screen and (min-width:1100px) { */
+        
+      body{
+        /* background: url(./design/active-states.jpg) no-repeat center fixed; */
+        background-color: hsl(257, 40%, 49%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-size: cover; */
+        margin: 0;
+        height: 100vh;
+        z-index: -1;
+        /* transform: scale(0.6); */
+      }
+      .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: scale(1.2);
+        width: 1260px;
+        font-family:'Poppins';
+        color: white;
+        fill: white;
+        z-index: 0;
+        transition: 0.2s ease;
+      }
+      .container > img{
+        padding-top: 90px;
+        padding-right: 15px;
+        padding-left: 5px;
+        box-sizing: border-box;
+        height: 577px;
+        margin-right: 40px;
+      }
+      .content{
+        padding: 0;
+        margin-bottom: 50px;
+        /* background-color: red; */
+      }
+      .content h1{
+        padding-top: 25px;
+        margin: 0;
+        font-size: 38.5px;
+      }
+      .content p{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 17px;
+        padding-left: 2px;
+        letter-spacing: 0.18px;
+        padding-right: 10px;
+        line-height: 26px;
+        opacity: 0.7;
+        font-family: 'Open Sans';
+        width: inherit;
+      }
+      .content button{
+        fill: white;
+        width: 195px;
+        border: none;
+        height: 55px;
+        font-family: 'Poppins';
+        font-size: 18px;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+        border-radius: 500px;
+        background-color: white;
+        color: hsl(257, 40%, 49%);
+      }
+      .content button:hover{
+        background-color: hsl(300, 69%, 71%);
+        color: white;
+      }
+      body > picture > img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .logo{
+        position: absolute;
+        z-index: 1;
+        top: -8.5%;
+        left: 0;
+      }
+      .logo img{
+        width: 210px;
+      }
+      .social-logo{
+        display: flex;
+        position: absolute;
+        bottom: -12.2%;
+        right: 0%;
+        box-sizing: border-box;
+      }
+      .circle{
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        margin: 10px;
+        box-sizing: border-box;
+        position: relative;
+        border: 1px solid white;
+
+      }
+      .circle > svg{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 20%;
+        width: 20px;
+        height: 20px;
+        fill: white;
+      }
+      .circle:hover svg{
+        fill: hsl(300, 69%, 71%);
+      }
+      .circle:hover{
+        border: 1px solid hsl(300, 69%, 71%);
+      }
+    /* } */
+    @media screen and (max-width: 1140px) {
+      body{
+        background: url(./design/mobile-design.jpg) no-repeat fixed center;
+        padding: 0;
+        background-size: 375px;
+        margin: 0 auto;
+        height: 100vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: hsl(257, 40%, 49%);
+        background-image: url(./images/bg-mobile.svg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100%;
+        flex-direction: column;
+      }
+      .container{
+        width: 750px;
+        height: 1600px;
+        transform: scale(1);
+        transform: 0.2s ease;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        box-sizing: border-box;
+        padding-top: 30%;
+        position: relative;
+      }
+      body picture{
+        position: absolute;
+        width: inherit;
+      }
+      .logo{
+        top: 0;
+        left: 0;
+        margin: 70px;
+        padding: 0;
+      }
+      .logo > img{
+        left: 0;
+        width: 250px;
+        margin: 0;
+        padding: 0;
+      }
+      .content{
+        width: 630px;
+        margin-top: 90px;
+        margin-bottom: 230px;
+      }
+      .content h1{
+        font-size: 48px;
+      }
+      .content p{
+        box-sizing: border-box;
+        font-size: 32px;
+        line-height: 48px;
+      }
+      .content button{
+        margin-top: 30px;
+        width: 400px;
+        height: 70px;
+      }
+      .container > img{
+        position: relative;
+        height: 440px;
+        padding: 0;
+        margin: 0;
+      }
+      .social-logo{
+        position: relative;
+        bottom: 8%;
+      }
+      .circle{
+        width: 60px;
+        height: 60px;
+      }
+      .circle svg{
+        width: 35px;
+        height: 35px;
+      }
+      footer{
+        position: relative;
+      }
+    }
+    *{
+      /* opacity: 0; */
+      /* outline: 1px solid red; */
+    }
+    
+  </style>
+</head>
+<body>
+
+  
+  <picture>
+    <source media="(max-width:1100px)" srcset="./images/bg-mobile.svg">
+    <source srcset="./images/bg-desktop.svg">
+    <img src="./images/bg-desktop.svg" alt="bg">
+  </picture>
+  
+  <main class="container">
+    
+    <div class="logo"><img src="./images/logo.svg" alt=""></div>
+    <img class="mockup" src="./images/illustration-mockups.svg" alt="mockup">
+    <content class="content">
+      <h1>Build The Community Your Fans Will Love</h1>
+      <p>
+        Huddle re-imagines the way we build communities. You have a voice, but so does your audience.
+        Create connections with your users as you engage in genuine discussion.
+      </p>
+      <button>Register</button>
+    </content>
+    <div class="social"></div>
+
+    <div class="social-logo">
+      <div class="circle">
+        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
+      </div>
+      <div class="circle">
+        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </div>
+      <div class="circle">
+        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+      </div>
+    </div>
+
+  </main>
+
+ 
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Farid Satria</a>.
+    </p>
+  </footer>
+ 
+</body>
+</html>
